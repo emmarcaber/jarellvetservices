@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PetOwnerController;
 use App\Http\Controllers\VeterinarianController;
+
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +22,4 @@ Route::get('/', function () {
 });
 
 Route::resource('veterinarians', VeterinarianController::class);
+Route::resource('petowners', PetOwnerController::class);
