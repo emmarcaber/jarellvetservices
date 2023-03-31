@@ -43,7 +43,7 @@ class PetOwnerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $pet_owner)
+    public function show(PetOwner $pet_owner)
     {
         return view('petowners.show', compact('pet_owner'));
     }
@@ -51,7 +51,7 @@ class PetOwnerController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $pet_owner)
+    public function edit(PetOwner $pet_owner)
     {
         return view('petowners.edit', compact('pet_owner'));
     }
@@ -59,7 +59,7 @@ class PetOwnerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $pet_owner)
+    public function update(Request $request, PetOwner $pet_owner)
     {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
@@ -75,7 +75,7 @@ class PetOwnerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $pet_owner)
+    public function destroy(PetOwner $pet_owner)
     {
         $pet_owner->delete();
 
