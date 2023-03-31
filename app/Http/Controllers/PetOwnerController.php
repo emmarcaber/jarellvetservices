@@ -13,7 +13,6 @@ class PetOwnerController extends Controller
     public function index()
     {
         $pet_owners = PetOwner::all();
-
         return view('petowners.index', compact('pet_owners'));
     }
 
@@ -45,23 +44,23 @@ class PetOwnerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $pet_owner)
     {
-        return view('petowners.show', compact('pet_owners'));
+        return view('petowners.show', compact('pet_owner'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $pet_owner)
     {
-        return view('petowners.edit', compact('pet_owners'));
+        return view('petowners.edit', compact('pet_owner'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $pet_owner)
     {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
@@ -78,7 +77,7 @@ class PetOwnerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $pet_owner)
     {
         $pet_owner->delete();
 
