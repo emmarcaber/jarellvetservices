@@ -9,10 +9,5 @@ class PetOwner extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'address',
-        'email',
-        'phone_number',
-    ];
+    protected $fillable = ['name', 'address', 'email', 'phone_number'];
 }

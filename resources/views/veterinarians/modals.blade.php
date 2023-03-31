@@ -74,15 +74,17 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <p>Are you sure you want to delete this veterinarian?</p>
-                <form action="{{ route('veterinarians.destroy', $veterinarian->id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <input type="hidden" id="delete_id" name="id">
+            <form action="{{ route('veterinarians.destroy', $veterinarian->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this pet owner?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
