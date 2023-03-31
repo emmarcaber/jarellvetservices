@@ -42,14 +42,13 @@ class PetController extends Controller
         ]);
 
         Pet::create($validatedData);
-
         return redirect()->route('pets.index')->with('success', 'Pet added successfully.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $pet)
     {
         return view('pets.show', compact('pet'));
     }
@@ -57,7 +56,7 @@ class PetController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $pet)
     {
         return view('pets.edit', compact('pet'));
     }
@@ -65,7 +64,7 @@ class PetController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $pet)
     {
         $validatedData = $request->validate([
             'name' => 'required',

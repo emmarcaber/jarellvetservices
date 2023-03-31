@@ -37,7 +37,6 @@ class PetOwnerController extends Controller
         ]);
 
         $owner = PetOwner::create($validatedData);
-
         return redirect()->route('petowners.index')->with('success', 'Owner created successfully.');
     }
 
@@ -70,7 +69,6 @@ class PetOwnerController extends Controller
         ]);
 
         $pet_owner->update($validatedData);
-
         return redirect()->route('petowners.index')->with('success', 'Owner updated successfully.');
     }
 
