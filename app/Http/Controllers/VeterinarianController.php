@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PetOwner;
 use App\Models\Veterinarian;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,8 @@ class VeterinarianController extends Controller
     public function index()
     {
         $veterinarians = Veterinarian::all();
-        return view('veterinarians.index', compact('veterinarians'));
+        $pet_owners = PetOwner::all();
+        return view('veterinarians.index', compact('veterinarians', 'pet_owners'));
     }
 
     public function create()
