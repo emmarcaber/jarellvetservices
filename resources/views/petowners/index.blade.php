@@ -20,7 +20,7 @@
                 <td>{{ $pet_owner->email }}</td>
                 <td>{{ $pet_owner->phone_number }}</td>
                 <td>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editPetOwnerModal" data-id="{{ $pet_owner->id }}" data-name="{{ $pet_owner->name }}" data-contact-info="{{ $pet_owner->contact_info }}" data-professional-qualifications="{{ $pet_owner->professional_qualifications }}">Edit</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editPetOwnerModal" data-id="{{ $pet_owner->id }}" data-name="{{ $pet_owner->name }}">Edit</button>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletePetOwnerModal" data-id="{{ $pet_owner->id }}">Delete</button>
                 </td>
             </tr>
