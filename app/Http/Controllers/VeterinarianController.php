@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PetOwner;
 use App\Models\Veterinarian;
 use Illuminate\Http\Request;
 
@@ -10,8 +11,9 @@ class VeterinarianController extends Controller
     public function index()
     {
         $veterinarians = Veterinarian::all();
+        $pet_owners = PetOwner::all();
 
-        return view('veterinarians.index', compact('veterinarians'));
+        return view('veterinarians.index', compact('veterinarians', 'pet_owners'));
     }
 
     public function create()
@@ -44,6 +46,6 @@ class VeterinarianController extends Controller
     public function destroy(Veterinarian $veterinarian)
     {
         $veterinarian->delete();
-        return redirect()->route('veterinarians.index');
+        return redirect()->route('veterinarians.index')->with('success', 'Veterinarian deleted successfully.');
     }
 }

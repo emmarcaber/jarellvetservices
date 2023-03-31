@@ -6,6 +6,7 @@
         <thead>
         <tr>
             <th>Name</th>
+            <th>Address</th>
             <th>Email</th>
             <th>Phone Number</th>
             <th>Action</th>
@@ -15,6 +16,7 @@
         @foreach($pet_owners as $pet_owner)
             <tr>
                 <td>{{ $pet_owner->name}}</td>
+                <td>{{ $pet_owner->address}}</td>
                 <td>{{ $pet_owner->email }}</td>
                 <td>{{ $pet_owner->phone_number }}</td>
                 <td>

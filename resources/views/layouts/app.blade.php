@@ -22,6 +22,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('petowners.index') }}">Pet Owners</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('pets.index') }}">Pets</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -36,6 +39,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('petowners.index') }}">Pet Owners</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pets.index') }}">Pets</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -44,9 +50,11 @@
         </main>
     </div>
 </div>
-<!-- Veterinarian Modals -->
+<!-- Veterinarians Modals -->
 @include('veterinarians.modals')
 <!-- Pet Owners Modals -->
 @include('petowners.modals')
+<!-- Pets Modals -->
+@include('pets.modals')
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PetController;
 use App\Http\Controllers\PetOwnerController;
 use App\Http\Controllers\VeterinarianController;
 
@@ -23,3 +24,4 @@ Route::get('/', function () {
 
 Route::resource('veterinarians', VeterinarianController::class);
 Route::resource('petowners', PetOwnerController::class);
+Route::resource('pets', PetController::class);
