@@ -22,8 +22,8 @@
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteVeterinarianModal" data-id="{{ $veterinarian->id }}">Delete</button>
                 </td>
             </tr>
+            @include('veterinarians.modals')
         @endforeach
         </tbody>
     </table>
-    @include('veterinarians.modals')
 @endsection

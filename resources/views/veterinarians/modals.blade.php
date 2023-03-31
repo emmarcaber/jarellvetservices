@@ -46,15 +46,15 @@
                     @method('PUT')
                     <div class="form-group">
                         <label for="edit_name">Name</label>
-                        <input type="text" class="form-control" id="edit_name" name="name" required>
+                        <input type="text" class="form-control" id="edit_name" name="name" value="{{ $veterinarian -> name }}" required>
                     </div>
                     <div class="form-group">
                         <label for="edit_contact_info">Contact Info</label>
-                        <input type="text" class="form-control" id="edit_contact_info" name="contact_info" required>
+                        <input type="text" class="form-control" id="edit_contact_info" name="contact_info" value="{{ $veterinarian -> contact_info }}" required>
                     </div>
                     <div class="form-group">
                         <label for="edit_professional_qualifications">Professional Qualifications</label>
-                        <input type="text" class="form-control" id="edit_professional_qualifications" name="professional_qualifications" required>
+                        <input type="text" class="form-control" id="edit_professional_qualifications" name="professional_qualifications" value="{{ $veterinarian -> professional_qualifications }}" required>
                     </div>
                     <input type="hidden" id="edit_id" name="id">
                     <button type="submit" class="btn btn-primary">Update</button>
@@ -78,7 +78,7 @@
                 @csrf
                 @method('DELETE')
                 <div class="modal-body">
-                    <p>Are you sure you want to delete this pet owner?</p>
+                    <p>Are you sure you want to delete this veterinarian?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
